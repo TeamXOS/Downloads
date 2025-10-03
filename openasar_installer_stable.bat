@@ -29,9 +29,6 @@ if exist "%localappdata%\Discord\app-1.0.9213\resources\app.asar" powershell -Co
 if exist "%localappdata%\Discord\app-1.0.9210\resources\_app.asar" powershell -Command "Invoke-WebRequest https://github.com/GooseMod/OpenAsar/releases/download/nightly/app.asar -OutFile \"$Env:LOCALAPPDATA\Discord\app-1.0.9210\resources\_app.asar\"" > nul 2> nul
 if exist "%localappdata%\Discord\app-1.0.9210\resources\app.asar.orig" powershell -Command "Invoke-WebRequest https://github.com/GooseMod/OpenAsar/releases/download/nightly/app.asar -OutFile \"$Env:LOCALAPPDATA\Discord\app-1.0.9210\resources\app.asar.orig\"" > nul 2> nul
 
-echo Opening Discord...
-start "" "%localappdata%\Discord\Update.exe" --processStart Discord.exe > nul 2> nul
-
 C:\Windows\System32\TIMEOUT.exe /t 1 /nobreak > nul 2> nul
 
 exit
